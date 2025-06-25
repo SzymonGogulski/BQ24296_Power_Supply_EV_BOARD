@@ -1,0 +1,191 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,7.0.10*%
+%TF.CreationDate,2025-06-24T15:40:27+02:00*%
+%TF.ProjectId,BQ2xxxx,42513278-7878-4782-9e6b-696361645f70,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L2,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.10) date 2025-06-24 15:40:27*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 Aperture macros list*
+%AMHorizOval*
+0 Thick line with rounded ends*
+0 $1 width*
+0 $2 $3 position (X,Y) of the first rounded end (center of the circle)*
+0 $4 $5 position (X,Y) of the second rounded end (center of the circle)*
+0 Add line between two ends*
+20,1,$1,$2,$3,$4,$5,0*
+0 Add two circle primitives to create the rounded ends*
+1,1,$1,$2,$3*
+1,1,$1,$4,$5*%
+%AMRotRect*
+0 Rectangle, with rotation*
+0 The origin of the aperture is its center*
+0 $1 length*
+0 $2 width*
+0 $3 Rotation angle, in degrees counterclockwise*
+0 Add horizontal line*
+21,1,$1,$2,0,0,$3*%
+G04 Aperture macros list end*
+%TA.AperFunction,ComponentPad*%
+%ADD10R,1.500000X1.500000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD11C,1.500000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD12C,2.745000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD13C,2.100000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD14C,2.010000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD15RotRect,1.700000X1.700000X225.000000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD16HorizOval,1.700000X0.000000X0.000000X0.000000X0.000000X0*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.P,U4,1,e*%
+%TO.N,/segE*%
+X58600000Y-107700000D03*
+D11*
+%TO.P,U4,2,d*%
+%TO.N,/segD*%
+X61140000Y-107700000D03*
+%TO.P,U4,3,DPX*%
+%TO.N,/segDP*%
+X63680000Y-107700000D03*
+%TO.P,U4,4,c*%
+%TO.N,/segC*%
+X66220000Y-107700000D03*
+%TO.P,U4,5,g*%
+%TO.N,/segG*%
+X68760000Y-107700000D03*
+%TO.P,U4,6,CC4*%
+%TO.N,/Digit7*%
+X71300000Y-107700000D03*
+%TO.P,U4,7,b*%
+%TO.N,/segB*%
+X71300000Y-92460000D03*
+%TO.P,U4,8,CC3*%
+%TO.N,/Digit6*%
+X68760000Y-92460000D03*
+%TO.P,U4,9,CC2*%
+%TO.N,/Digit5*%
+X66220000Y-92460000D03*
+%TO.P,U4,10,f*%
+%TO.N,/segF*%
+X63680000Y-92460000D03*
+%TO.P,U4,11,a*%
+%TO.N,/segA*%
+X61140000Y-92460000D03*
+%TO.P,U4,12,CC1*%
+%TO.N,/Digit4*%
+X58600000Y-92460000D03*
+%TD*%
+D10*
+%TO.P,U3,1,e*%
+%TO.N,/segE*%
+X22100000Y-58600000D03*
+D11*
+%TO.P,U3,2,d*%
+%TO.N,/segD*%
+X22100000Y-61140000D03*
+%TO.P,U3,3,DPX*%
+%TO.N,/segDP*%
+X22100000Y-63680000D03*
+%TO.P,U3,4,c*%
+%TO.N,/segC*%
+X22100000Y-66220000D03*
+%TO.P,U3,5,g*%
+%TO.N,/segG*%
+X22100000Y-68760000D03*
+%TO.P,U3,6,CC4*%
+%TO.N,/Digit3*%
+X22100000Y-71300000D03*
+%TO.P,U3,7,b*%
+%TO.N,/segB*%
+X37340000Y-71300000D03*
+%TO.P,U3,8,CC3*%
+%TO.N,/Digit2*%
+X37340000Y-68760000D03*
+%TO.P,U3,9,CC2*%
+%TO.N,/Digit1*%
+X37340000Y-66220000D03*
+%TO.P,U3,10,f*%
+%TO.N,/segF*%
+X37340000Y-63680000D03*
+%TO.P,U3,11,a*%
+%TO.N,/segA*%
+X37340000Y-61140000D03*
+%TO.P,U3,12,CC1*%
+%TO.N,/Digit0*%
+X37340000Y-58600000D03*
+%TD*%
+D12*
+%TO.P,BT2,1_1*%
+%TO.N,+BATT*%
+X91119958Y-73980042D03*
+%TO.P,BT2,1_2*%
+X87527856Y-77572144D03*
+%TO.P,BT2,1_3*%
+X94712061Y-81164247D03*
+%TD*%
+D13*
+%TO.P,BT1,N1*%
+%TO.N,GND*%
+X49909775Y-36361961D03*
+%TO.P,BT1,N2*%
+X44610010Y-37348375D03*
+%TO.P,BT1,N3*%
+X50896189Y-31062196D03*
+%TD*%
+D14*
+%TO.P,J4,MH1,SH1*%
+%TO.N,GND*%
+X24303073Y-30362475D03*
+%TO.P,J4,MH2,SH2*%
+X21616067Y-27675470D03*
+%TO.P,J4,MH3,SH3*%
+X27725470Y-21566067D03*
+%TO.P,J4,MH4,SH4*%
+X30412475Y-24253073D03*
+%TD*%
+%TO.P,J1,MH1,SH1*%
+%TO.N,GND*%
+X105446927Y-99437525D03*
+%TO.P,J1,MH2,SH2*%
+X108133933Y-102124530D03*
+%TO.P,J1,MH3,SH3*%
+X102024530Y-108233933D03*
+%TO.P,J1,MH4,SH4*%
+X99337525Y-105546927D03*
+%TD*%
+D15*
+%TO.P,J2,1,Pin_1*%
+%TO.N,GND*%
+X96033289Y-56097647D03*
+D16*
+%TO.P,J2,2,Pin_2*%
+%TO.N,V_MCU_LOGIC*%
+X94237238Y-54301596D03*
+%TO.P,J2,3,Pin_3*%
+%TO.N,/INT*%
+X92441187Y-52505545D03*
+%TO.P,J2,4,Pin_4*%
+%TO.N,/SCL*%
+X90645135Y-50709493D03*
+%TO.P,J2,5,Pin_5*%
+%TO.N,/SDA*%
+X88849084Y-48913442D03*
+%TD*%
+M02*

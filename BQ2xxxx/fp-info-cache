@@ -1,4 +1,4 @@
-22645117854602656
+22659123261784892
 54
 BAT_54
 
@@ -13,6 +13,13 @@ BAT_590
 0
 3
 3
+1054500101
+MOLEX_1054500101
+
+
+0
+28
+28
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -62796,6 +62803,13 @@ Yellow 5381 Series LED
 0
 2
 2
+MJD31CG
+TRANS_MJD31CG
+
+
+0
+3
+3
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -85791,6 +85805,41 @@ rotary encoder
 0
 7
 6
+SamacSys
+5FD1S102M2QE
+
+
+0
+6
+6
+SamacSys
+5MS1S102AM6QES
+5MS1S102AM6QES-2
+Switch
+0
+5
+5
+SamacSys
+1201M2S3AQE2
+1201M2S3AQE2-2
+Switch
+0
+8
+8
+SamacSys
+NE555DR
+D (R-PDSO-G8)
+Integrated Circuit
+0
+8
+8
+SamacSys
+USB4125GFA
+USB4125-GF-A-6
+Connector
+0
+10
+10
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -92280,6 +92329,13 @@ igbt diode module
 0
 25
 25
+USB4515-GF-A_REVA
+GCT_USB4515-GF-A_REVA
+
+
+0
+10
+10
 Valve
 Valve_ECC-83-1
 Valve ECC-83-1 round pins
