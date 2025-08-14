@@ -1,0 +1,3 @@
+../Core/Src/FSM.cpp:27:6:void FSM::process_state()	1
+../Core/Src/FSM.cpp:33:6:void user_code_2()	3
+../Core/Src/FSM.cpp:56:6:void user_code_3()	4

@@ -1,0 +1,80 @@
+#include "FSM.h"
+#include "main.h"
+#include <stdio.h>
+
+int counter = 0;
+
+class FSM
+{
+public:
+	enum Tstate{STANDBY, STARTING, RUNNING, STOPPING};
+
+	FSM();
+	~FMS();
+	void process_state();
+
+private:
+	bool process_state_flag;
+	Tstate present_state;
+	Tstate next_state;
+	// inputs
+	int ON_OFF;
+	int REACT;
+	// outputs
+	int EN5V;
+	int TRIG;
+};
+
+void user_code_2(void) {
+
+    // Check if device powered up or woke up from standby
+    if (__HAL_PWR_GET_FLAG(PWR_FLAG_SB) != RESET){                              // device woke up
+
+        printf("Woke up from STANDBY\n");
+        __HAL_PWR_CLEAR_FLAG(PWR_FLAG_SB);
+        HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN1);
+
+        for (int i=0;i<10;i++){
+            HAL_Delay(300);
+            HAL_GPIO_WritePin(GPIOC, LED_Pin, GPIO_PIN_SET);                // Drive PC13 HIGH -> LED OFF
+            HAL_Delay(300);
+            HAL_GPIO_WritePin(GPIOC, LED_Pin, GPIO_PIN_RESET);
+        }
+    } else {                                                                    // device powered up
+        printf("Device powered up\n");
+    }
+
+    HAL_GPIO_WritePin(GPIOB, EN5V_Pin, GPIO_PIN_SET);
+    printf("Going into main loop\n");
+}
+
+void user_code_3(void) {
+    // Pooling OFF pin
+    if (HAL_GPIO_ReadPin(GPIOA, OFF_Pin) == GPIO_PIN_SET){
+
+        printf("Going to STANDBY ...\n");
+
+        for (int i = 0; i < 60; i++){
+        HAL_Delay(50);
+        HAL_GPIO_WritePin(GPIOC, LED_Pin, GPIO_PIN_SET); // Drive PC13 HIGH -> LED OFF
+        HAL_Delay(50);
+        HAL_GPIO_WritePin(GPIOC, LED_Pin, GPIO_PIN_RESET);
+        }
+
+        HAL_GPIO_WritePin(GPIOB, EN5V_Pin, GPIO_PIN_RESET);
+        __HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
+        HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN1);
+        printf("STANBY mode\n");
+        HAL_PWR_EnterSTANDBYMode();
+    }
+
+    if (HAL_GPIO_ReadPin(GPIOB, REACT_Pin) == GPIO_PIN_SET) {
+
+        HAL_GPIO_WritePin(GPIOB, TRIG_Pin, GPIO_PIN_SET);
+        counter++;
+        printf("Current counter value: %d \n", counter);
+    } else {
+        HAL_GPIO_WritePin(GPIOB, TRIG_Pin, GPIO_PIN_RESET);
+    }
+
+}

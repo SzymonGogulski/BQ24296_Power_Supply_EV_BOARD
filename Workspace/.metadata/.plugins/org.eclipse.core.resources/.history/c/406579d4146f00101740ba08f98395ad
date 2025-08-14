@@ -1,0 +1,35 @@
+#include "func.h"
+#include "main.h"
+#include <stdio.h>
+
+int _write(int file, char *ptr, int len)
+{
+	int i=0;
+	for (i=0; i<len; i++){
+		ITM_SendChar((*ptr++));
+	}
+	return len;
+}
+
+void user_code_2(void) {
+    //
+    if (__HAL_PWR_GET_FLAG(PWR_FLAG_SB) != RESET){
+        __HAL_PWR_CLEAR_FLAG(PWR_FLAG_SB);
+        printf("Woke up from STANDBY\n");
+        HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN1);
+
+        for (int i=0;i<10;i++){
+            HAL_Delay(300);
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);   // Drive PC13 HIGH -> LED OFF
+            HAL_Delay(300);
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+        }
+    }
+
+    HAL_GPIO_WritePin(GPIOB, EN5V_Pin, GPIO_PIN_SET);
+    printf("Going into main loop\n");
+}
+
+void user_code_3(void) {
+    // TODO: implement
+}

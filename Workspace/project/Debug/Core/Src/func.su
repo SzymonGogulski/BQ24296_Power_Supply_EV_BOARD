@@ -1,0 +1,4 @@
+../Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/func.c:7:5:_write	32	static
+../Core/Src/func.c:15:6:user_code_2	16	static
+../Core/Src/func.c:38:6:user_code_3	16	static

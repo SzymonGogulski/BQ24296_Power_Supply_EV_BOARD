@@ -10,4 +10,5 @@
   (lib (name "MJD31CG")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/MJD31CG")(options "")(descr ""))
   (lib (name "MAX17048G_T10")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/MAX17048G_T10")(options "")(descr ""))
   (lib (name "STM32F030R8T6")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/STM32F030R8T6")(options "")(descr ""))
+  (lib (name "SPM10054T-1R5M-HZ")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/SPM10054T_1R5M_HZ")(options "")(descr ""))
 )
