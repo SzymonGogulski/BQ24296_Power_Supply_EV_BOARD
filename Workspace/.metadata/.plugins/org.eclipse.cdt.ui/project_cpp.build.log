@@ -1,17 +1,17 @@
-13:03:32 **** Build of configuration Debug for project project_cpp ****
+17:45:03 **** Incremental Build of configuration Debug for project project_cpp ****
 make -j8 all 
-arm-none-eabi-g++ "../Core/Src/FSM.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FSM.d" -MT"Core/Src/FSM.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FSM.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-g++ -o "project_cpp.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\szymo\Desktop\TI BQ2xxxx EV board\Workspace\project_cpp\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="project_cpp.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: project_cpp.elf
  
 arm-none-eabi-size  project_cpp.elf 
 arm-none-eabi-objdump -h -S project_cpp.elf  > "project_cpp.list"
    text	   data	    bss	    dec	    hex	filename
-  13744	    104	   2064	  15912	   3e28	project_cpp.elf
+   8648	     12	   1724	  10384	   2890	project_cpp.elf
 Finished building: default.size.stdout
  
 Finished building: project_cpp.list
  
 
-13:03:35 Build Finished. 0 errors, 0 warnings. (took 3s.110ms)
+17:45:04 Build Finished. 0 errors, 0 warnings. (took 920ms)
 

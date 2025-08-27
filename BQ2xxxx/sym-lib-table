@@ -11,4 +11,7 @@
   (lib (name "SymacSys")(type "KiCad")(uri "C:/Users/szymo/Downloads/SamacSys/SamacSys_Parts.kicad_sym")(options "")(descr ""))
   (lib (name "MAX17048G_T10")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/MAX17048G_T10/MAX17048G_T10.kicad_sym")(options "")(descr ""))
   (lib (name "STM32F030R8T6")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/STM32F030R8T6/STM32F030R8T6.kicad_sym")(options "")(descr ""))
+  (lib (name "AU-Y1008-2")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/AU-Y1008-2/AU-Y1008-2.kicad_sym")(options "")(descr ""))
+  (lib (name "USB1035")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/USB1035_GF_P_0_B_B/USB1035-XX-X-X-X-B_REVE.kicad_sym")(options "")(descr ""))
+  (lib (name "87583-0010RHLF")(type "KiCad")(uri "${KIPRJMOD}/Biblioteki/87583-0010RHLF/87583-0010RHLF.kicad_sym")(options "")(descr ""))
 )

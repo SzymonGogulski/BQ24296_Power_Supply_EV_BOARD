@@ -4,7 +4,11 @@
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
-    "hidden_nets": [],
+    "hidden_nets": [
+      "/BOOT",
+      "/5VEN",
+      "/BTST"
+    ],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
@@ -37,6 +41,7 @@
       8,
       9,
       10,
+      11,
       12,
       13,
       15,
@@ -60,10 +65,11 @@
       34,
       35,
       36,
+      37,
       39,
       40
     ],
-    "visible_layers": "ffcffff_ffffffff",
+    "visible_layers": "ffcffe7_7ffffff8",
     "zone_display_mode": 0
   },
   "meta": {

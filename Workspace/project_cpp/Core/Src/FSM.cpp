@@ -4,18 +4,20 @@
 
 
 
+
 class FSM{
 public:
 	enum Tstate{STANDBY, STARTING, RUNNING, STOPPING};
 
 	FSM();
 	~FSM();
-	void process_state();
+	void set_process_state_flag(bool value);
 
 private:
 	bool process_state_flag;
-	Tstate present_state;
-	Tstate next_state;
+	Tstate current_state;
+    void process_state();
+
 	// inputs
 	int ON_OFF;
 	int REACT;
@@ -24,11 +26,21 @@ private:
 	int TRIG;
 };
 
-void FSM::process_state(){
+FSM::FSM(){
 
 }
+//
+//void FSM::process_state(){
+//    case
+//}
 
-int counter = 0;
+
+
+
+
+
+// ------------------------- user functions
+
 
 void user_code_2(void) {
 
@@ -45,8 +57,12 @@ void user_code_2(void) {
             HAL_Delay(300);
             HAL_GPIO_WritePin(GPIOC, LED_Pin, GPIO_PIN_RESET);
         }
-    } else {                                                                    // device powered up
+    } else {                                 						// device powered up -> go into STANDBY
         printf("Device powered up\n");
+        __HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
+        HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN1);
+        printf("STANBY mode\n");
+        HAL_PWR_EnterSTANDBYMode();
     }
 
     HAL_GPIO_WritePin(GPIOB, EN5V_Pin, GPIO_PIN_SET);
@@ -76,8 +92,6 @@ void user_code_3(void) {
     if (HAL_GPIO_ReadPin(GPIOB, REACT_Pin) == GPIO_PIN_SET) {
 
         HAL_GPIO_WritePin(GPIOB, TRIG_Pin, GPIO_PIN_SET);
-        counter++;
-        printf("Current counter value: %d \n", counter);
     } else {
         HAL_GPIO_WritePin(GPIOB, TRIG_Pin, GPIO_PIN_RESET);
     }

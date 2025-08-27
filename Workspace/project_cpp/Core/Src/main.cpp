@@ -105,7 +105,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  user_code_2();
+  //user_code_2();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -115,7 +115,11 @@ int main(void)
     /* USER CODE END WHILE */
 
 	  /* USER CODE BEGIN 3 */
-	  user_code_3();
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
+	  HAL_Delay(1000);
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET);
+	  HAL_Delay(1000);
+	  //user_code_3();
   }
   /* USER CODE END 3 */
 }
@@ -249,7 +253,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, TRIG_Pin|EN5V_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, TRIG_Pin|EN5V_Pin|GPIO_PIN_9, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : LED_Pin */
   GPIO_InitStruct.Pin = LED_Pin;
@@ -258,11 +262,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : OFF_Pin */
-  GPIO_InitStruct.Pin = OFF_Pin;
+  /*Configure GPIO pins : OFF_Pin INT_BQ_Pin INT_MAX_Pin */
+  GPIO_InitStruct.Pin = OFF_Pin|INT_BQ_Pin|INT_MAX_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(OFF_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : DISP_Pin REACT_Pin */
   GPIO_InitStruct.Pin = DISP_Pin|REACT_Pin;
@@ -270,8 +274,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : TRIG_Pin EN5V_Pin */
-  GPIO_InitStruct.Pin = TRIG_Pin|EN5V_Pin;
+  /*Configure GPIO pins : TRIG_Pin EN5V_Pin PB9 */
+  GPIO_InitStruct.Pin = TRIG_Pin|EN5V_Pin|GPIO_PIN_9;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

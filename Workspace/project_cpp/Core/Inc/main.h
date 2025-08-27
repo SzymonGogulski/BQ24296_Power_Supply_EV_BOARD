@@ -63,6 +63,10 @@ void Error_Handler(void);
 #define ON_GPIO_Port GPIOA
 #define OFF_Pin GPIO_PIN_1
 #define OFF_GPIO_Port GPIOA
+#define INT_BQ_Pin GPIO_PIN_3
+#define INT_BQ_GPIO_Port GPIOA
+#define INT_MAX_Pin GPIO_PIN_4
+#define INT_MAX_GPIO_Port GPIOA
 #define DISP_Pin GPIO_PIN_0
 #define DISP_GPIO_Port GPIOB
 #define REACT_Pin GPIO_PIN_1
